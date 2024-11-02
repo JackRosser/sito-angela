@@ -39,7 +39,7 @@ $angela-theme: mat.define-theme(
 @tailwind components;
 @tailwind utilities;
 @import "./app/partials/custom";
-
+@import "./app/partials/keyframes";
 html,
 body {
   height: 100%;

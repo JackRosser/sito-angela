@@ -3,5 +3,6 @@ export interface iTheme {
   navbarButtons:string,
   mobileBg:string,
   mobileButton:string
+  spanIcon:string
   mainBg:string
 }

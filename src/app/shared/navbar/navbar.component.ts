@@ -22,6 +22,7 @@ navBg!:string
 liStyle!:string
 mobileBg!:string
 mobileButton!:string
+spanIcon!:string
 
 ngOnInit() {
   this.themeSvc.theme$.subscribe(style => {
@@ -29,6 +30,7 @@ ngOnInit() {
     this.liStyle = style.navbarButtons
     this.mobileBg = style.mobileBg
     this.mobileButton = style.mobileButton
+    this.spanIcon = style.spanIcon
   })
 }
 

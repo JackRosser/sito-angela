@@ -104,12 +104,16 @@ showSelector():void {
     setTimeout(() => {
       this.scaleFruit = "scale-[1.2]"
       this.scaleKiwi = "scale-[0.8]"
+      this.themesSelector = "transform: translateX(-50vw) translateY(50vh) scale(2)"
     }, 2000);
   } else {
     this.toggleShowThemesSelector = false
     this.themesSelector = "animation: anim-inactive 2s both"
     this.scaleFruit = "scale-0"
     this.scaleKiwi = "scale-0"
+    setTimeout(() => {
+      this.themesSelector = ""
+    }, 2000);
   }
 }
 

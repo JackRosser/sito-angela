@@ -12,3 +12,21 @@
 .show {
   animation: showmenu 300ms;
 }
+
+@keyframes anim-active {
+  from {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+  to {
+    transform: translateX(-50vw) translateY(50vh) scale(1.5);
+  }
+}
+
+@keyframes anim-inactive {
+  from {
+    transform: translateX(-50vw) translateY(50vh) scale(1.5);
+  }
+  to {
+    transform: translateX(0) translateY(0) scale(1.1);
+  }
+}

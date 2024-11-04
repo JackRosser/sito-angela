@@ -6,7 +6,14 @@
       <li [class]="theme.navbarButtons">FATTURE</li>
       <li [class]="theme.navbarButtons">EXTRA</li>
       <li [class]="theme.navbarButtons">NOTE</li>
-      <li [class]="theme.navbarButtons">TEMA</li>
+      <li class="absolute right-5 top-2 tocenter">
+        <i
+          [class]="theme.navbarButtons"
+          [style]="themesSelector"
+          class="bi bi-rainbow rounded-full"
+          (click)="showSelector()"
+        ></i>
+      </li>
       <li
         (click)="showMenuMobile()"
         class="cursor-pointer hover:text-orange-500 lg:hidden"
@@ -57,10 +64,30 @@
       </li>
       <li [class]="theme.mobileButton">
         TEMA
-        <span [class]="theme.spanIcon"><i class="bi bi-journal-plus"></i></span>
+        <span [class]="theme.spanIcon"><i class="bi bi-rainbow"></i></span>
       </li>
     </ul>
   </div>
+  <img
+    src="/images/orange.png"
+    alt="orange"
+    class="absolute top-[25%] right-[49%] cursor-pointer transition-transform duration-300 hover:scale-[1.6] active:scale-[1.4] active:rotate-45 scale-[1.2]"
+  />
+  <img
+    src="/images/kiwi.png"
+    alt="orange"
+    class="absolute top-[65%] right-[47%] cursor-pointer transition-transform duration-300 hover:scale-[1.4] active:scale-[1.4] active:rotate-45 scale-[1]"
+  />
+  <img
+    src="/images/mirtillo.png"
+    alt="orange"
+    class="absolute top-[45%] right-[35%] cursor-pointer transition-transform duration-300 hover:scale-[1.6] active:scale-[1.4] active:rotate-45 scale-[1.2]"
+  />
+  <img
+    src="/images/ciliegia.png"
+    alt="orange"
+    class="absolute top-0 left-[6rem] cursor-pointer transition-transform duration-300 hover:scale-[1.6] active:scale-[1.4] active:rotate-45 scale-[1.2]"
+  />
 </ng-container>
 
 <!-- stile hover funzione per cambiare tema -->

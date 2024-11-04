@@ -91,6 +91,13 @@ showSelector():void {
   }
 }
 
+themesMobile:boolean = true
+
+showThemesMobile():void {
+  this.themesMobile = !this.themesMobile
+  this.toggleMobile = !this.toggleMobile
+}
+
 ngOnInit() {
   this.themeSvc.theme$.subscribe(style => {
 this.theme = style

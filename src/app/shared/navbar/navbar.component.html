@@ -1,5 +1,6 @@
 <ng-container *ngIf="theme">
   <nav [class]="theme.navbarBg">
+    <!-- NAVBAR DESKTOP -->
     <ul class="flex gap-5 justify-end lg:justify-center">
       <li [class]="theme.navbarButtons">IL MIO PIANO ALIMENTARE</li>
       <li [class]="theme.navbarButtons">VISITE IN ITINERE</li>
@@ -34,7 +35,8 @@
       </li>
     </ul>
   </nav>
-  <div *ngIf="toggleMobile" class="fixed show right-0 top-[61px]">
+  <!-- NAVBAR MOBILE -->
+  <div *ngIf="toggleMobile" class="fixed show right-0 top-[61px] z-30">
     <ul [class]="theme.mobileBg">
       <li [class]="theme.mobileButton">
         IL MIO PIANO ALIMENTARE
@@ -62,7 +64,7 @@
         NOTE
         <span [class]="theme.spanIcon"><i class="bi bi-journal-plus"></i></span>
       </li>
-      <li [class]="theme.mobileButton">
+      <li [class]="theme.mobileButton" (click)="showThemesMobile()">
         TEMA
         <span [class]="theme.spanIcon"><i class="bi bi-rainbow"></i></span>
       </li>
@@ -100,4 +102,33 @@
       scaleFruit
     "
   />
+  <div
+    *ngIf="themesMobile"
+    class="absolute bottom-0 right-0 w-[100vw] h-[calc(100vh-61px)] lg:hidden z-10 flex flex-col text-white"
+  >
+    <div
+      class="flex gap-5 items-center justify-center h-1/4 cursor-pointer bg-orange-400 hover:bg-orange-200"
+    >
+      <img src="/images/orange.png" alt="orange" class="max-h-[8rem]" />
+      <span class="italic text-[2rem]">ARANCIA</span>
+    </div>
+    <div
+      class="flex gap-5 flex-row-reverse items-center justify-center h-1/4 cursor-pointer bg-green-600 hover:bg-green-400"
+    >
+      <img src="/images/kiwi.png" alt="orange" class="max-h-[8rem]" />
+      <span class="italic text-[2rem]">KIWI</span>
+    </div>
+    <div
+      class="flex gap-5 items-center justify-center h-1/4 cursor-pointer bg-violet-400 hover:bg-violet-200"
+    >
+      <img src="/images/mirtillo.png" alt="orange" class="max-h-[8rem]" />
+      <span class="italic text-[2rem]">MIRTILLO</span>
+    </div>
+    <div
+      class="flex gap-5 flex-row-reverse items-center justify-center h-1/4 cursor-pointer bg-red-400 hover:bg-red-200"
+    >
+      <img src="/images/ciliegia.png" alt="orange" class="max-h-[8rem]" />
+      <span class="italic text-[2rem]">CILIEGIA</span>
+    </div>
+  </div>
 </ng-container>

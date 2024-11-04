@@ -1,35 +1,11 @@
-<nav class="fixed text-white py-2 pr-5 lg:px-5 w-full bg-orange-300 z-20">
+<nav [class]="navBg">
   <ul class="flex gap-5 justify-end lg:justify-center">
-    <li
-      class="bg-orange-500 py-2 px-3 rounded-lg cursor-pointer hover:bg-yellow-300 hover:text-orange-400 transition-colors duration-300 hidden lg:block"
-    >
-      IL MIO PIANO ALIMENTARE
-    </li>
-    <li
-      class="bg-orange-500 py-2 px-3 rounded-lg cursor-pointer hover:bg-yellow-300 hover:text-orange-400 transition-colors duration-300 hidden lg:block"
-    >
-      VISITE IN ITINERE
-    </li>
-    <li
-      class="bg-orange-500 py-2 px-3 rounded-lg cursor-pointer hover:bg-yellow-300 hover:text-orange-400 transition-colors duration-300 hidden lg:block"
-    >
-      FATTURE
-    </li>
-    <li
-      class="bg-orange-500 py-2 px-3 rounded-lg cursor-pointer hover:bg-yellow-300 hover:text-orange-400 transition-colors duration-300 hidden lg:block"
-    >
-      EXTRA
-    </li>
-    <li
-      class="bg-orange-500 py-2 px-3 rounded-lg cursor-pointer hover:bg-yellow-300 hover:text-orange-400 transition-colors duration-300 hidden lg:block"
-    >
-      NOTE
-    </li>
-    <li
-      class="bg-orange-500 py-2 px-3 rounded-lg cursor-pointer hover:bg-yellow-300 hover:text-orange-400 transition-colors duration-300 hidden lg:block"
-    >
-      TEMA
-    </li>
+    <li [class]="liStyle">IL MIO PIANO ALIMENTARE</li>
+    <li [class]="liStyle">VISITE IN ITINERE</li>
+    <li [class]="liStyle">FATTURE</li>
+    <li [class]="liStyle">EXTRA</li>
+    <li [class]="liStyle">NOTE</li>
+    <li [class]="liStyle">TEMA</li>
     <li
       (click)="showMenuMobile()"
       class="cursor-pointer hover:text-orange-500 lg:hidden"
@@ -51,52 +27,38 @@
   </ul>
 </nav>
 <div *ngIf="toggleMobile" class="fixed show right-0 top-[61px]">
-  <ul
-    class="flex flex-col items-end lg:hidden bg-orange-300 text-white px-5 py-5 rounded-bl-2xl"
-  >
-    <li
-      class="py-2 px-3 cursor-pointer hover:text-orange-400 transition-colors duration-300 custom-text-shadow"
-    >
+  <ul [class]="mobileBg">
+    <li [class]="mobileButton">
       IL MIO PIANO ALIMENTARE
       <span class="ms-1 text-orange-500"
         ><i class="bi bi-journal-text"></i
       ></span>
     </li>
-    <li
-      class="py-2 px-3 cursor-pointer hover:text-orange-400 transition-colors duration-300 custom-text-shadow"
-    >
+    <li [class]="mobileButton">
       VISITE IN ITINERE
       <span class="ms-1 text-orange-500"
         ><i class="bi bi-journal-check"></i
       ></span>
     </li>
-    <li
-      class="py-2 px-3 cursor-pointer hover:text-orange-400 transition-colors duration-300 custom-text-shadow"
-    >
+    <li [class]="mobileButton">
       FATTURE
       <span class="ms-1 text-orange-500"
         ><i class="bi bi-journal-arrow-down"></i
       ></span>
     </li>
-    <li
-      class="py-2 px-3 cursor-pointer hover:text-orange-400 transition-colors duration-300 custom-text-shadow"
-    >
+    <li [class]="mobileButton">
       EXTRA
       <span class="ms-1 text-orange-500"
         ><i class="bi bi-journal-medical"></i
       ></span>
     </li>
-    <li
-      class="py-2 px-3 cursor-pointer hover:text-orange-400 transition-colors duration-300 custom-text-shadow"
-    >
+    <li [class]="mobileButton">
       NOTE
       <span class="ms-1 text-orange-500"
         ><i class="bi bi-journal-plus"></i
       ></span>
     </li>
-    <li
-      class="py-2 px-3 cursor-pointer hover:text-orange-400 transition-colors duration-300 custom-text-shadow"
-    >
+    <li [class]="mobileButton">
       TEMA
       <span class="ms-1 text-orange-500"
         ><i class="bi bi-journal-plus"></i

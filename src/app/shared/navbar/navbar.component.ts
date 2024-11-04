@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ThemeService } from '../../services/theme.service';
+import { iTheme } from '../../models/theme';
 
 @Component({
   selector: 'app-navbar',
@@ -18,19 +19,11 @@ showMenuMobile():void {
   this.toggleMobile = !this.toggleMobile
 }
 
-navBg!:string
-liStyle!:string
-mobileBg!:string
-mobileButton!:string
-spanIcon!:string
+theme!:iTheme
 
 ngOnInit() {
   this.themeSvc.theme$.subscribe(style => {
-    this.navBg = style.navbarBg
-    this.liStyle = style.navbarButtons
-    this.mobileBg = style.mobileBg
-    this.mobileButton = style.mobileButton
-    this.spanIcon = style.spanIcon
+this.theme = style
   })
 }
 

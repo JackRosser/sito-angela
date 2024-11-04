@@ -1,56 +1,66 @@
-<nav [class]="navBg">
-  <ul class="flex gap-5 justify-end lg:justify-center">
-    <li [class]="liStyle">IL MIO PIANO ALIMENTARE</li>
-    <li [class]="liStyle">VISITE IN ITINERE</li>
-    <li [class]="liStyle">FATTURE</li>
-    <li [class]="liStyle">EXTRA</li>
-    <li [class]="liStyle">NOTE</li>
-    <li [class]="liStyle">TEMA</li>
-    <li
-      (click)="showMenuMobile()"
-      class="cursor-pointer hover:text-orange-500 lg:hidden"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="45"
-        height="45"
-        fill="currentColor"
-        class="bi bi-list"
-        viewBox="0 0 16 16"
+<ng-container *ngIf="theme">
+  <nav [class]="theme.navbarBg">
+    <ul class="flex gap-5 justify-end lg:justify-center">
+      <li [class]="theme.navbarButtons">IL MIO PIANO ALIMENTARE</li>
+      <li [class]="theme.navbarButtons">VISITE IN ITINERE</li>
+      <li [class]="theme.navbarButtons">FATTURE</li>
+      <li [class]="theme.navbarButtons">EXTRA</li>
+      <li [class]="theme.navbarButtons">NOTE</li>
+      <li [class]="theme.navbarButtons">TEMA</li>
+      <li
+        (click)="showMenuMobile()"
+        class="cursor-pointer hover:text-orange-500 lg:hidden"
       >
-        <path
-          fill-rule="evenodd"
-          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
-        />
-      </svg>
-    </li>
-  </ul>
-</nav>
-<div *ngIf="toggleMobile" class="fixed show right-0 top-[61px]">
-  <ul [class]="mobileBg">
-    <li [class]="mobileButton">
-      IL MIO PIANO ALIMENTARE
-      <span [class]="spanIcon"><i class="bi bi-journal-text"></i></span>
-    </li>
-    <li [class]="mobileButton">
-      VISITE IN ITINERE
-      <span [class]="spanIcon"><i class="bi bi-journal-check"></i></span>
-    </li>
-    <li [class]="mobileButton">
-      FATTURE
-      <span [class]="spanIcon"><i class="bi bi-journal-arrow-down"></i></span>
-    </li>
-    <li [class]="mobileButton">
-      EXTRA
-      <span [class]="spanIcon"><i class="bi bi-journal-medical"></i></span>
-    </li>
-    <li [class]="mobileButton">
-      NOTE
-      <span [class]="spanIcon"><i class="bi bi-journal-plus"></i></span>
-    </li>
-    <li [class]="mobileButton">
-      TEMA
-      <span [class]="spanIcon"><i class="bi bi-journal-plus"></i></span>
-    </li>
-  </ul>
-</div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="45"
+          height="45"
+          fill="currentColor"
+          class="bi bi-list"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+          />
+        </svg>
+      </li>
+    </ul>
+  </nav>
+  <div *ngIf="toggleMobile" class="fixed show right-0 top-[61px]">
+    <ul [class]="theme.mobileBg">
+      <li [class]="theme.mobileButton">
+        IL MIO PIANO ALIMENTARE
+        <span [class]="theme.spanIcon"><i class="bi bi-journal-text"></i></span>
+      </li>
+      <li [class]="theme.mobileButton">
+        VISITE IN ITINERE
+        <span [class]="theme.spanIcon"
+          ><i class="bi bi-journal-check"></i
+        ></span>
+      </li>
+      <li [class]="theme.mobileButton">
+        FATTURE
+        <span [class]="theme.spanIcon"
+          ><i class="bi bi-journal-arrow-down"></i
+        ></span>
+      </li>
+      <li [class]="theme.mobileButton">
+        EXTRA
+        <span [class]="theme.spanIcon"
+          ><i class="bi bi-journal-medical"></i
+        ></span>
+      </li>
+      <li [class]="theme.mobileButton">
+        NOTE
+        <span [class]="theme.spanIcon"><i class="bi bi-journal-plus"></i></span>
+      </li>
+      <li [class]="theme.mobileButton">
+        TEMA
+        <span [class]="theme.spanIcon"><i class="bi bi-journal-plus"></i></span>
+      </li>
+    </ul>
+  </div>
+</ng-container>
+
+<!-- stile hover funzione per cambiare tema -->

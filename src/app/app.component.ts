@@ -16,7 +16,7 @@ customTheme!:string
 ngOnInit() {
 
 this.themeSvc.theme$.subscribe(theme => {
-  this.customTheme = theme
+  this.customTheme = theme.mainBg
 })
 
 }

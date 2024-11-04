@@ -28,14 +28,24 @@ private bhTheme = new BehaviorSubject<iTheme>({
 })
 theme$ = this.bhTheme.asObservable()
 
-changeTheme(navBg:string, navBtnBg:string, navBtnHoverBg:string, navBtnHoverText:string, navMobBg:string, navMobBtnHov:string, navMobIcon:string, main:string):void {
+changeThemeBh(navBg:string, navBtnBg:string, navBtnHover:string, navMobBg:string, navMobBtnHov:string, navMobIcon:string, main:string):void {
 this.navbarBg = navBg
 this.navbarButtonsBg = navBtnBg
-this.navbarButtonsHover = `hover:${navBtnHoverBg} hover:${navBtnHoverText}`
+this.navbarButtonsHover = navBtnHover
 this.navbarMobileBg = navMobBg
 this.navbarMobileButtonHover = navMobBtnHov
 this.navbarMobileIcon = navMobIcon
 this.mainBg = main
+let newTheme:iTheme = {
+  theme: "arancia",
+  navbarBg: `fixed text-white py-2 pr-5 lg:px-5 w-full z-30 ${this.navbarBg}`,
+  navbarButtons: `py-2 px-3 rounded-lg cursor-pointer transition-colors duration-300 hidden lg:block ${this.navbarButtonsBg} ${this.navbarButtonsHover}`,
+  mobileBg: `flex flex-col items-end lg:hidden text-white px-5 py-5 rounded-bl-2xl ${this.navbarMobileBg}`,
+  mobileButton: `py-2 px-3 cursor-pointer transition-colors duration-300 custom-text-shadow hover:${this.navbarMobileButtonHover}`,
+  spanIcon: this.navbarMobileIcon,
+  mainBg: this.mainBg
+}
+this.bhTheme.next(newTheme)
 }
 
 }

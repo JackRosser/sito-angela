@@ -70,62 +70,72 @@
       </li>
     </ul>
   </div>
+  <!-- IMMAGINI PER DESKTOP -->
   <img
     src="/images/orange.png"
     alt="orange"
+    (click)="changeTheme('orange')"
     [class]="
-      'absolute top-[25%] right-[49%] cursor-pointer transition-transform duration-300 hover:scale-[1.6] active:scale-[1.4] active:rotate-45 ' +
+      'hidden lg:block absolute top-[25%] right-[49%] cursor-pointer transition-transform duration-300 hover:scale-[1.6] active:scale-[1.4] active:rotate-45 ' +
       scaleFruit
     "
   />
   <img
     src="/images/kiwi.png"
     alt="kiwi"
+    (click)="changeTheme('kiwi')"
     [class]="
-      'absolute top-[42%] left-[30%] cursor-pointer transition-transform duration-300 hover:scale-[1] active:scale-[1.4] active:rotate-45 ' +
+      'hidden lg:block absolute top-[42%] left-[30%] cursor-pointer transition-transform duration-300 hover:scale-[1] active:scale-[1.4] active:rotate-45 ' +
       scaleKiwi
     "
   />
   <img
     src="/images/mirtillo.png"
     alt="mirtillo"
+    (click)="changeTheme('mirtillo')"
     [class]="
-      'absolute top-[45%] right-[37%] cursor-pointer transition-transform duration-300 hover:scale-[1.6] active:scale-[1.4] active:rotate-45 ' +
+      'hidden lg:block absolute top-[45%] right-[37%] cursor-pointer transition-transform duration-300 hover:scale-[1.6] active:scale-[1.4] active:rotate-45 ' +
       scaleFruit
     "
   />
   <img
     src="/images/ciliegia.png"
     alt="ciliegia"
+    (click)="changeTheme('ciliegia')"
     [class]="
-      'absolute top-[65%] right-[49%] cursor-pointer transition-transform duration-300 hover:scale-[1.5] active:scale-[1.4] active:rotate-45 ' +
+      'hidden lg:block absolute top-[65%] right-[49%] cursor-pointer transition-transform duration-300 hover:scale-[1.5] active:scale-[1.4] active:rotate-45 ' +
       scaleFruit
     "
   />
+  <!-- IMMAGINI PER MOBILE -->
   <div
     *ngIf="themesMobile"
     class="absolute bottom-0 right-0 w-[100vw] h-[calc(100vh-61px)] lg:hidden z-10 flex flex-col text-white"
   >
     <div
       class="flex gap-5 items-center justify-center h-1/4 cursor-pointer bg-orange-400 hover:bg-orange-200"
+      (click)="changeTheme('orange')"
     >
       <img src="/images/orange.png" alt="orange" class="max-h-[8rem]" />
       <span class="italic text-[2rem]">ARANCIA</span>
     </div>
     <div
       class="flex gap-5 flex-row-reverse items-center justify-center h-1/4 cursor-pointer bg-green-600 hover:bg-green-400"
+      (click)="changeTheme('kiwi')"
     >
       <img src="/images/kiwi.png" alt="orange" class="max-h-[8rem]" />
       <span class="italic text-[2rem]">KIWI</span>
     </div>
     <div
       class="flex gap-5 items-center justify-center h-1/4 cursor-pointer bg-violet-400 hover:bg-violet-200"
+      (click)="changeTheme('mirtillo')"
     >
       <img src="/images/mirtillo.png" alt="orange" class="max-h-[8rem]" />
       <span class="italic text-[2rem]">MIRTILLO</span>
     </div>
     <div
       class="flex gap-5 flex-row-reverse items-center justify-center h-1/4 cursor-pointer bg-red-400 hover:bg-red-200"
+      (click)="changeTheme('ciliegia')"
     >
       <img src="/images/ciliegia.png" alt="orange" class="max-h-[8rem]" />
       <span class="italic text-[2rem]">CILIEGIA</span>

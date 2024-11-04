@@ -1,1 +1,6 @@
-<router-outlet></router-outlet>
+<app-navbar></app-navbar>
+<ng-container *ngIf="customTheme">
+  <main [class]="customTheme">
+    <router-outlet></router-outlet>
+  </main>
+</ng-container>

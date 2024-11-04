@@ -71,23 +71,33 @@
   <img
     src="/images/orange.png"
     alt="orange"
-    class="absolute top-[25%] right-[49%] cursor-pointer transition-transform duration-300 hover:scale-[1.6] active:scale-[1.4] active:rotate-45 scale-[1.2]"
+    [class]="
+      'absolute top-[25%] right-[49%] cursor-pointer transition-transform duration-300 hover:scale-[1.6] active:scale-[1.4] active:rotate-45 ' +
+      scaleFruit
+    "
   />
   <img
     src="/images/kiwi.png"
-    alt="orange"
-    class="absolute top-[65%] right-[47%] cursor-pointer transition-transform duration-300 hover:scale-[1.4] active:scale-[1.4] active:rotate-45 scale-[1]"
+    alt="kiwi"
+    [class]="
+      'absolute top-[42%] left-[30%] cursor-pointer transition-transform duration-300 hover:scale-[1] active:scale-[1.4] active:rotate-45 ' +
+      scaleKiwi
+    "
   />
   <img
     src="/images/mirtillo.png"
-    alt="orange"
-    class="absolute top-[45%] right-[35%] cursor-pointer transition-transform duration-300 hover:scale-[1.6] active:scale-[1.4] active:rotate-45 scale-[1.2]"
+    alt="mirtillo"
+    [class]="
+      'absolute top-[45%] right-[37%] cursor-pointer transition-transform duration-300 hover:scale-[1.6] active:scale-[1.4] active:rotate-45 ' +
+      scaleFruit
+    "
   />
   <img
     src="/images/ciliegia.png"
-    alt="orange"
-    class="absolute top-0 left-[6rem] cursor-pointer transition-transform duration-300 hover:scale-[1.6] active:scale-[1.4] active:rotate-45 scale-[1.2]"
+    alt="ciliegia"
+    [class]="
+      'absolute top-[65%] right-[49%] cursor-pointer transition-transform duration-300 hover:scale-[1.5] active:scale-[1.4] active:rotate-45 ' +
+      scaleFruit
+    "
   />
 </ng-container>
-
-<!-- stile hover funzione per cambiare tema -->

@@ -72,14 +72,22 @@ selectedTheme!:string
 
 toggleShowThemesSelector:boolean = false
 themesSelector:string = ""
+scaleFruit:string = "scale-0"
+scaleKiwi:string = "scale-0"
 
 showSelector():void {
   if(!this.toggleShowThemesSelector) {
     this.toggleShowThemesSelector = true
     this.themesSelector = "animation: anim-active 2s both"
+    setTimeout(() => {
+      this.scaleFruit = "scale-[1.2]"
+      this.scaleKiwi = "scale-[0.8]"
+    }, 2000);
   } else {
     this.toggleShowThemesSelector = false
     this.themesSelector = "animation: anim-inactive 2s both"
+    this.scaleFruit = "scale-0"
+    this.scaleKiwi = "scale-0"
   }
 }
 
